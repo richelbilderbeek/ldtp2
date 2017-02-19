@@ -9,9 +9,19 @@ install:
   # Documentation
   #- sudo apt-get install rst2pdf
 
+# Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+
 script:
   # Build LDTP
   - python setup.py build
   - sudo python setup.py install
   # Build documentation
   # Build and run examples
+  - cd examples
+  - python gcalctool.py
+  - python gedit.py
+  - ruby test.rb
