@@ -24,6 +24,7 @@ script:
   # Build documentation
   # Build and run examples
   - cd examples
-  - python gcalctool.py
-  - python gedit.py
-  - ruby test.rb
+  - python minimal.py
+  #- python gcalctool.py
+  #- python gedit.py
+  #- ruby test.rb
