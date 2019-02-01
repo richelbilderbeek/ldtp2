@@ -22,12 +22,12 @@ script:
   - which python
   - python -V
   # Build LDTP
-  - python setup.py build
-  - sudo python setup.py install
+  - /usr/bin/python setup.py build
+  - sudo /usr/bin/python setup.py install
   # Build documentation
   # Build and run examples
   - cd examples
-  - python minimal.py
+  - /usr/bin/python minimal.py
   #- python gcalctool.py
   #- python gedit.py
   #- ruby test.rb
