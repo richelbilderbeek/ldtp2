@@ -7,7 +7,9 @@ dist: trusty
 # gnome-calculator, for examples/gcalctool.py
 install:
   - sudo apt-get install python-twisted-web
-  - sudo apt-get install python-wnck python-at-spi
+  - sudo apt-get install python-wnck
+  - apt-cache search python-at-spi
+  - sudo apt-get install python-at-spi
   - sudo apt-get install gnome-calculator
 
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
