@@ -18,6 +18,9 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script:
+  # Check python
+  - which python
+  - python -V
   # Build LDTP
   - python setup.py build
   - sudo python setup.py install
