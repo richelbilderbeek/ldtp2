@@ -1,16 +1,13 @@
 sudo: required
 dist: trusty
 
+# Suggestion to install python-at-spi from https://stackoverflow.com/a/40805150
+#- sudo apt-get install python-gnome
+#- sudo apt-get install rst2pdf
+# gnome-calculator, for examples/gcalctool.py
 install:
-  # LDTP
   - sudo apt-get install python-twisted-web
-  - sudo apt-get install python-wnck
-  # From https://stackoverflow.com/a/40805150
-  - sudo apt-get install python-at-spi
-  #- sudo apt-get install python-gnome
-  # Documentation
-  #- sudo apt-get install rst2pdf
-  # gnome-calculator, for examples/gcalctool.py
+  - sudo apt-get install python-wnck python-at-spi
   - sudo apt-get install gnome-calculator
 
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
